@@ -1,0 +1,163 @@
+.main-nav {
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    padding: 0.5rem 0;
+}
+
+.nav-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+/* Navegación con animación */
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem 0;
+    transition: all 0.3s ease;
+}
+
+/* Efecto de línea deslizante */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #3498db;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Animación al hacer hover */
+.nav-links a:hover {
+    color: #3498db;
+    transform: translateY(-2px);
+}
+
+/* Estilos del logo */
+.logo-text .wi {
+    color: #003B95;
+    font-weight: bold;
+}
+
+.logo-text .comm {
+    color: #f7941d;
+    font-weight: bold;
+}
+
+/* Animación de entrada para los enlaces */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.nav-links a {
+    animation: fadeInDown 0.5s ease forwards;
+    animation-delay: calc(var(--item-index) * 0.1s);
+    opacity: 0;
+}
+
+/* Asignar índices a los enlaces para la animación escalonada */
+.nav-links a:nth-child(1) { --item-index: 1; }
+.nav-links a:nth-child(2) { --item-index: 2; }
+.nav-links a:nth-child(3) { --item-index: 3; }
+
+/* Estilos específicos para la sección de soporte remoto */
+.remote-support h1 {
+    text-align: center;
+    margin: 2rem auto;  
+    padding: 1rem 0;
+    position: relative;
+    max-width: 600px; 
+}
+
+.remote-support h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background-color: #3498db;  
+}
+
+/* Estilos específicos para la navegación en subpáginas */
+.subpage-nav .nav-links {
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+    background: none;
+    box-shadow: none;
+    position: static;
+    transform: none;
+}
+
+.subpage-nav .nav-links a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem 0;
+    transition: all 0.3s ease;
+}
+
+/* Efecto de línea deslizante */
+.subpage-nav .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #3498db;
+    transition: width 0.3s ease;
+}
+
+.subpage-nav .nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Animación al hacer hover */
+.subpage-nav .nav-links a:hover {
+    color: #3498db;
+    transform: translateY(-2px);
+}

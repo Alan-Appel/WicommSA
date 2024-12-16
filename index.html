@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Wicomm - Soporte Técnico Profesional</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    </head>
+
+<body>
+    <nav class="main-nav">
+        <div class="nav-content">
+            <div class="logo">
+                <img src="images/Logo de Wicomm.png" alt="Wicomm Logo">
+                <div class="logo-text">
+                    <span class="wi">Wi</span><span class="com">Comm</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#inicio"><i class="fas fa-home"></i> Inicio</a></li>
+                <li><a href="#" onclick="openAboutModal()"><i class="fas fa-info-circle"></i> Sobre Nosotros</a></li>
+                <li><a href="#servicios"><i class="fas fa-cogs"></i> Servicios</a></li>
+                <li><a href="#contacto"><i class="fas fa-envelope"></i> Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="inicio" class="hero">
+        <div class="hero-slider">
+            <div class="slide-track">
+                <div class="slide">
+                    <div class="hero-background overlay" style="background-image: url('images/wicomm.png');"></div>
+                </div>
+                <div class="slide"> 
+                    <div class="hero-background overlay" style="background-image: url('images/laptop.png');"></div>
+                </div>
+                <div class="slide">
+                    <div class="hero-background overlay" style="background-image: url('images/tablets.png');"></div>
+                </div>
+                <div class="slide">
+                    <div class="hero-background overlay" style="background-image: url('images/reparacion.png');"></div>
+                </div>
+                <div class="slide">
+                    <div class="hero-background overlay" style="background-image: url('images/cpu.png');"></div>
+                </div>
+                <div class="slide"> 
+                    <div class="hero-background overlay" style="background-image: url('images/Router.png');"></div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-content">
+            <h1>Soporte Técnico Profesional</h1>
+            <p>Soluciones rápidas y eficientes para tus problemas tecnológicos</p>
+            <button class="cta-button" onclick="scrollToContact()">Solicitar Soporte</button>
+        </div>
+    </section>
+
+    <section id="servicios" class="services">
+        <h2>Nuestros Servicios</h2>
+        <div class="services-grid">
+            <!-- Soporte Remoto -->
+            <div class="service-card">
+                <a href="soporte-remoto.html" class="service-link">
+                    <div class="service-content">
+                        <i class="fas fa-desktop"></i>
+                        <h3>Soporte Remoto</h3>
+                        <p>Asistencia inmediata desde cualquier lugar</p>
+                    </div>
+                </a>
+            </div>
+    
+            <!-- Mantenimiento -->
+            <div class="service-card">
+                <a href="mantenimiento.html" class="service-link">
+                    <div class="service-content">
+                        <i class="fas fa-tools"></i>
+                        <h3>Mantenimiento</h3>
+                        <p>Preventivo y correctivo de equipos</p>
+                    </div>
+                </a>
+            </div>
+    
+            <!-- Redes -->
+            <div class="service-card">
+                <a href="redes.html" class="service-link">
+                    <div class="service-content">
+                        <i class="fas fa-network-wired"></i>
+                        <h3>Redes</h3>
+                        <p>Configuración y solución de problemas</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contacto">
+        <h2>Contacto</h2>
+        <div class="contact-container">
+            <form id="consultaForm" class="support-form">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="from_name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" required>
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="message" required></textarea>
+                </div>
+                <button type="submit" class="submit-button">Enviar Consulta</button>
+            </form>
+
+            <div class="emergency-support">
+                <h3>¿Necesitas ayuda urgente?</h3>
+                <p>Llámanos: +595 212 387 600</p>
+                <button class="chat-button" onclick="initChat()">
+                    <a href="https://wa.me/595982989855"> <i class="fas fa-comments"></i> Iniciar Chat </a>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>Wicomm</h3>
+                <p>Soporte Técnico Profesional</p>
+            </div>
+            <div class="footer-contact">
+                <h4>Contáctanos</h4>
+                <p>Email: soporte@wicomm.com</p>
+                <p>Tel: +595212387600</p>
+            </div>
+            <div class="social-links">
+                <a href="https://www.instagram.com/wicommpy/?hl=es"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/wicommsa/"><i class="fab fa-facebook"></i></a>
+                <a href="https://wa.me/595982989855""><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <div id="chat-widget" class="chat-widget hidden">
+
+    </div>
+
+    <script src="wicomm.js"></script>
+
+    <div id="aboutModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeAboutModal()">&times;</span>
+            <h2>Sobre Nosotros</h2>
+            <div class="about-text">
+                <p>WiComm S.A. es una empresa fundada en Agosto del 2.006...</p>
+                <p>Nos especializamos en brindar servicios de alta calidad para empresas y particulares, ofreciendo soluciones personalizadas que se adaptan a las necesidades específicas de cada cliente.</p>
+                <p> Entrando siempre en el mercado corporativo, comenzó a trabajar fuertemente con TIGO para darles soluciones a las empresas de diferentes portes, que comenzaban a migrar de clientes de llamadas a clientes con requerimientos de conexión e información al instante.</p>
+                <p>Así WiComm S.A. se posicionó como referente en tecnologías móviles a nivel corporativo; al mismo tiempo que por necesidad de los mismos clientes, comenzó con un pequeño taller de reparación de celulares.</p>
+                <p>Hoy en día tenemos somos reconocidos cómo una empresa de servicio técnico de reparación de celulares, tabletas, televisores, noteboks, etc.; con más de 40 funcionarios. Al mismo tiempo, seguimos dando soporte a varias empresas con soluciones de tecnología móvil; además de desarrollo de aplicaciones corporativas.</p>
+                <p>Somos Centro de Servicio Autorizado de prestigiosas marcas, que nos dan soporte, pero al mismo tiempo nos exigen un nivel por encima de los demás en reparaciones, calidad y tiempos de reparación.</p>
+                <p>Creemos firmemente, que la CALIDAD de la reparación es lo más importante; pero también constantemente estamos buscando mejores formas de trabajar, para ser más eficientes y más rápidos.</p>
+                <p>También estamos convencidos que la forma más eficiente de hacer las cosas, es utilizando la tecnología, y para ello estamos en constante cambios, actualizaciones, capacitaciones; siempre buscando cómo la misma tecnología que tenemos al alcance de la mano nos puede ayudar.</p>
+            </div>
+        </div>
+    </div>
+
+<script>
+    (function() {
+        emailjs.init("zheom42xtEnyQbCop");
+    })();
+
+    document.getElementById('consultaForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        // Mostrar indicador de carga
+        Swal.fire({
+            title: 'Enviando...',
+            text: 'Por favor espera...',
+            allowOutsideClick: false,
+            didOpen: () => {
+                Swal.showLoading()
+            }
+        });
+
+        emailjs.sendForm('ppwu_wffm_phuk_ayld', 'template_syi4ezf', this)
+            .then(function() {
+                Swal.fire({
+                    icon: 'success',
+                    title: '¡Mensaje enviado!',
+                    text: 'Nos pondremos en contacto contigo pronto.'
+                });
+                document.getElementById('consultaForm').reset();
+            })
+            .catch(function(error) {
+                console.error('Error:', error);
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error al enviar',
+                    text: 'Hubo un problema al enviar tu mensaje. Por favor, intenta nuevamente.'
+                });
+            });
+    });
+</script>
+
+<script src="wicomm.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="consultas.js"></script>
+
+<script type="text/javascript">
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function() {
+        var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = 'https://embed.tawk.to/675c71f2af5bfec1dbdb7d31/1if0hq7n0';
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
+    })();
+</script>
+
+</body>
+</html>
